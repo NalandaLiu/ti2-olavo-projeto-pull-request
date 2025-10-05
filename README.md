@@ -22,8 +22,6 @@ O projeto em questão pretende criar um sistema que simule o funcionamento dos p
 
 Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
 
-## Histórico de versões
-
 * 0.1.1
     * CHANGE: Atualização das documentações. Código permaneceu inalterado.
 * 0.1.0
