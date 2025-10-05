@@ -5,6 +5,7 @@ const token = getCookie('token');
 if(token){
     try {
         const payload = decodeJWT(token);
+
         console.log('Payload decodificado:', payload);
         role = payload.role; 
     } catch (error) {
