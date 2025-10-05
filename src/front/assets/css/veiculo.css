@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.div-filter {
+  display: flex; /* Flexbox para centralizar */
+  flex-wrap: wrap; /* Permite quebra de linha se necessário */
+  margin: auto; /* Centraliza horizontalmente */
+  padding: 10px; /* Ajusta o espaço interno */
+  justify-content: center; /* Alinha os itens ao centro horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  background-color: #ffffff;
+  width: 90vw; /* Ajuste dinâmico da largura */
+  max-width: 1200px; /* Define um limite para a largura */
+  gap: 10px; /* Espaçamento entre os itens */
+  border-radius: 8px; /* Cantos arredondados */
+}
+
+.div-filter * {
+  margin: 0;
+}
+
+
+.pesquisa input[type="search"] {
+  width: 250px;
+  padding: 8px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  transition: border-color 0.3s ease;
+  box-shadow: 0px 2px 0px lightgray;
+}
+
+.pesquisa input[type="search"]:focus {
+  border-color: #ffbf00;
+}
+
+.div-filter .dropdown-toggle {
+  background-color: #333333;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  padding: 8px 40px;
+  border-radius: 0 !important; /* Garante que as bordas fiquem retas */
+  transition: background-color 0.3s;
+}
+
+.dropdown-toggle:hover {
+  background-color: #d79734;
+}
+
+.dropdown-menu {
+  background-color: #f0f0f0;
+}
+
+.dropdown-item:hover {
+  background-color: #ffbf00;
+  color: #fff;
+}
+
+.cardbox {
+  border-radius: 15px;
+  width: 70vw;
+  max-height: 160vh;
+  margin: auto;
+  margin-top: 1vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+}
+
+.card {
+  height: 220px; /* Ajustar a altura dos cards */
+  width: 200px; /* Ajustar a largura dos cards */
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #ffbf00;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-add {
+  position: fixed;
+  bottom: 110px;
+  right: 40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ffbf00;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-add:hover {
+  background-color: #d79734;
+}
+
+.search-container {
+  position: relative;
+  width: 300px; /* Ajuste o tamanho conforme necessário */
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 8px rgba(204, 204, 204, 0.3); /* Sombra mais suave */
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  left: 260px; /* Ajusta a posição da lupa à direita */
+  top: 50%;
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  width: 20px; /* Ajuste o tamanho da lupa conforme necessário */
+  height: 20px;
+  pointer-events: none; /* Evita que a imagem interfira na interação com o input */
+}
+
+#titulo-card{
+  margin: 10px 0 10px 0;
+}
+
+.titulo-atributo-card{
+  color: #898383;
+  text-align: start;
+  margin: 5px 0 5px 18px;
+}
+
+.btn-custom-yellow {
+  background-color:#ffbf00; 
+  color: #fff;
+  border: none;
+  padding: 8px 16px; 
+  border-radius: 4px; 
+  font-size: 14px;
+  transition: background-color 0.3s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-custom-yellow:hover {
+  background-color:#d79734; /* Tom mais escuro ao passar o mouse */
+}
+
+/*CSS dos campos do modal de detalhes*/
+.input-modal-detalhes{
+  padding: 6px 12px;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: 0.375rem;
+}
+
+.input-modal-detalhes:focus {
+  outline: none;
+}

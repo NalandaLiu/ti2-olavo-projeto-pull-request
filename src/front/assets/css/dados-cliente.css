@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    padding: 2rem;
+}
+
+.campos-cliente, .campos-endereco {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.campo-titulo {
+    margin-right: 48px;
+    margin-bottom: 24px;
+}
+
+.input-size {
+    width: 360px;
+}

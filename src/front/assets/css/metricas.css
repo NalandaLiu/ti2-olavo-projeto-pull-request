@@ -1,0 +1,12 @@
+main {
+    margin-left: 150px;
+}
+
+.graficos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.graph-area {
+    padding: 48px;
+}

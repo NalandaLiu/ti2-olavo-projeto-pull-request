@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-left: 150px;
+    padding: 2rem;
+}
+
+.info-value {
+    font-size: 24px;
+}
+
+.vehicle-info {
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 24px;
+    border-radius: 12px;
+    padding: 12px;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+
+}
+
+.numerical-fields {
+    display: flex;
+    flex-direction: row;
+}
+
+.valor-venda {
+    margin-right: 24px;
+}
+
+.campos-pagamento {
+    display: flex;
+    flex-direction: row;
+}
+
+#dropdown-financiamento {
+    margin-right: 24px;
+}
+
+.campo {
+    margin-bottom: 24px;
+}
+
+.campos-vus {
+    display: flex;
+    flex-direction: row;
+}
+
+#carro-usado-checkbox {
+    margin-right: 24px;
+}
+
+.vu-dados {
+    margin-bottom: 24px;
+    border-radius: 12px;
+    padding: 12px;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+}
+
+.campos-de-vus {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 24px;
+}

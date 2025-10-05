@@ -1,0 +1,102 @@
+main {
+    margin-left: 150px;
+}
+
+.titulo-navegacao {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detalhes-usuario {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2em;
+}
+
+.user-info {
+    margin-bottom: 1em;
+}
+
+.user-info-value {
+    width: 350px;
+}
+
+#tabela-funcionarios td {
+    padding: 6px 12px;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+}
+
+/***
+*   Secao de adicionar funcionarios (gerente)
+**/
+
+.funcionarios-title {
+    margin-bottom: 2em;
+}
+
+
+.adicionar-funcionarios {
+    margin-bottom: 2em;
+}
+
+
+/**
+*   Secao de metricas
+**/
+.metricas {
+    margin-bottom: 2em;
+}
+
+/***
+*   Modal de demissao
+*/
+
+#modal-demissao {
+    border-radius: 0;
+}
+
+.botoes-modal {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/**
+* Botao de adicionar funcionarios
+*/
+
+#add-funcionario {
+    font-size: large;
+    position: fixed;
+    border-radius: 72px;
+    height: 48px;
+    width: 48px;
+    bottom: 48px;
+    right: 48px
+}
+
+/*
+*   Modal de adicionar funcionario
+*/
+
+#modal-admissao-conteudo {
+    padding: 2.5em;
+}
+
+#modal-admissao-titulo {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+}
+
+.dado-funcionario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    margin-bottom: 1em;
+}
+
+.titulo-dado-funcionario {
+    margin-right: 1em;
+    font-size: 24px;
+}

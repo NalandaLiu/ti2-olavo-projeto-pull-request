@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.perfilGestor{
+    margin-bottom: 10vh;
+}
+
+.infoGerente{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 50vw;
+    font-size: large;
+    margin-top: 10vh;
+}
+
+.setFuncionarios{
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    border: 1px solid #000;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-weight: bold;
+}
+   
+.btn-add {
+    position: fixed;
+    bottom: 110px;
+    right: 40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ffbf00;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

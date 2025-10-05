@@ -1,0 +1,53 @@
+.sidebar {
+    background-color: #333;
+    color: white;
+    min-width: 150px;
+    padding: 20px 0;
+    position: fixed;
+    height: 100%;
+    display: grid;
+    align-items: center;
+}
+
+.sidebar-not-fixed {
+    background-color: #333;
+    color: white;
+    min-width: 150px;
+    padding: 20px 0;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    height: 100vh;
+}
+
+.sidebar a, .sidebar-not-fixed a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    height: 180px;
+    width: 100%;
+    margin-bottom: 8px; 
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:last-child, .sidebar-not-fixed a:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar .icon, .sidebar-not-fixed .icon {
+    font-size: 50px; /* Aumentar o tamanho dos ícones */
+    margin-bottom: 45px; /* Aumentar o espaçamento abaixo dos ícones */
+}
+
+.sidebar a:hover .icon, .sidebar-not-fixed a:hover .icon{
+    color: #ffbf00; /* Cor de hover apenas nos ícones */
+}
+
+.sideIcon {
+    justify-content: center; 
+}

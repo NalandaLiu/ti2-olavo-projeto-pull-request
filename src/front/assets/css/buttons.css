@@ -1,0 +1,19 @@
+.control-button {
+    color: white;
+    background-color: #FFBF00;
+}
+
+.control-button:hover {
+    color: white;
+    background-color: #FFBF00;
+}
+
+.add-button {
+    font-size: large;
+    position: fixed;
+    border-radius: 72px;
+    height: 48px;
+    width: 48px;
+    bottom: 48px;
+    right: 48px
+}

@@ -1,0 +1,42 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: MasterCar Concessionária
+authors:
+  - family-names: Nogueira Vieira Resende
+    given-names: Gabriel
+  - family-names: Vales Gomes de Castro Silva
+    given-names: Olavo
+  - family-names: Guimarães Costa
+    given-names: Sarah
+  - family-names: Araújo Fonseca Pimenta
+    given-names: Nícolas
+  - family-names: Martins
+    given-names: Jonas Rafael
+  - family-names: Marcondes Starling Rocha
+    given-names: Gabriel 
+  - family-names: Henrique da Silveira
+    given-names: Guilherme
+
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Hanne Soares de Andrade
+    given-names: Michelle 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Marques Alves da Silva
+    given-names: Alexandre
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Boechat Seufitelli
+    given-names: Danilo
+    
+keywords: 
+    - vendas
+    - carros
+    - concessionária
+    - gerenciamento
+
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti2-3740100-mastercar-concessionaria/tree/main
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2024-12-16

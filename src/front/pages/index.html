@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="../assets/css/css_reset.css">
+    <title>Entrar</title>
+</head>
+<body>
+    <div class="tela">
+        <!--Area da logo e form-->
+        <section class="lado-esquerdo">
+            <!--Topo da pagina-->
+            <nav class="logo-area">
+                <img src="../assets/img/logo-login.png" alt="mastercar logo">
+            </nav>
+            <!--Area do formulario-->
+            <section class="login-area">
+                <div class="user-icon-area">
+                    <div class="icon-text">
+                        <img src="../assets/img/user-icon.png" alt="user icon" id="user-icon">
+                        <h1 id="login-text">Login</h1>
+                    </div>
+                </div>
+                <div class="form-area">
+                    <div class="actual-form">
+                        <form action="" method="post" class="form-fields">
+                            <input type="text" placeholder="Usuário" required class="campo" id="username">
+                            <input type="password" placeholder="Senha" required class="campo" id="psswd">
+                            <div id="errorMessage"></div>
+                            <div class="submit-btn">
+                                <button type="button" id="login-btn">Entrar</button> <!-- Mudei o tipo aqui -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!--Area da imagem-->
+        <section class="lado-direito">
+            <img src="../assets/img/car-login.png" alt="tesla-car">
+        </section>
+    </div>
+    
+    <script src="../scripts/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

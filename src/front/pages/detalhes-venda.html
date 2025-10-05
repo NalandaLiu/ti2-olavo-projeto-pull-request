@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Venda</title>
+    <link rel="stylesheet" href="../assets/css/detalhe-venda.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--CSS do aside-->
+    <link rel="stylesheet" href="../assets/css/aside.css">
+    <link rel="stylesheet" href="../assets/css/buttons.css">
+</head>
+<body>
+    <section class="tela">
+        <aside class="sidebar">
+            <a href="./perfil.html"><i class="fas fa-user icon"></i></a>
+            <a href="./menu-vendas.html"><i class="fas fa-handshake icon"></i></a>
+            <a href="./veiculos.html"><i class="fas fa-car icon"></i></a>
+            <a href="./metricas.html"><i class="fa-solid fa-chart-line icon"></i></a>
+        </aside>
+
+        <main>
+            <!-- Barra de Progresso -->
+            <h2 id="vendaId">Venda</h2>
+            
+            <div class="progress-bar">
+                <div class="progress-step" id="step1">
+                  <label>Aguardando criação do pedido</label>
+                </div>
+                <div class="progress-step" id="step2">
+                  <label>Aguardando aprovação do financeiro</label>
+                </div>
+                <div class="progress-step" id="step3">
+                  <label>Aguardando aprovação do gestor</label>
+                </div>
+                <div class="progress-step" id="step4">
+                  <label>Aguardando entrega</label>
+                </div>
+            </div>  
+
+            <!-- Informações da Venda -->
+             <section class="informacoes-venda">
+                <h2>Informações</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Detalhes da Venda</h5>
+                            <p class="card-text"><span id="clienteNome"></span></p>
+                            <p class="card-text"><span id="veiculoPlaca"></span></p>
+                            <p class="card-text"><span id="Vu"></span></p>
+                            <p class="card-text"><span id="valorTotal"></span></p>
+                            <p class="card-text"><span id="vendedorNome"></span></p>
+                            <p class="card-text"><span id="emplacamentoNaLoja"></span></p>
+                            <!--<p class="card-text">Comissão: R$ <span id="comissaoValor"></span></p>-->
+                            <!--<p class="card-text">Gerente Responsável: <span id="gerenteNome"></span></p>-->
+                            <p class="card-text"><span id="data-venda"></span></p>
+                        </div>
+                    </div>
+             </section>
+            
+
+            <!-- Documentação e Histórico -->
+            <h2 class="mt-4">Documentação do Pedido</h2>
+            <div class="card">
+                <div class="card-body">
+                    <table class="table" id="documentTable">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Data de upload</th>
+                                <th>Tipo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><button class="btn btn-link upload-button" data-step="1">Upload</button></td>
+                                <td id="uploadDate1"></td>
+                                <td>Documento pessoal</td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn btn-link upload-button" data-step="2">Upload</button></td>
+                                <td id="uploadDate2"></td>
+                                <td>Comprovante de pagamento</td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn btn-link upload-button" data-step="3">Upload</button></td>
+                                <td id="uploadDate3"></td>
+                                <td>Contrato assinado</td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn btn-link upload-button" data-step="4">Upload</button></td>
+                                <td id="uploadDate4"></td>
+                                <td>Confirmação de entrega</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        
+        <!--Botao adicionar arquivo-->
+        <button class="btn control-button" id="addDocumentBtn">+</button>
+
+        <!--Modal para adicionar documento-->
+        <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="uploadModalLabel">Upload de Documentos</h5>
+                    </div>
+                    <div class="modal-body text-center">
+                        <i class="fas fa-cloud-upload-alt fa-3x mb-3"></i>
+                        <p>Selecione o tipo de documento para upload</p>
+        
+                        <!-- Combobox para selecionar o tipo de documento -->
+                        <select class="form-select mb-3" id="documentTypeSelect">
+                            <option value="documentoPessoal">Documento Pessoal</option>
+                            <option value="comprovanteDePagamento">Comprovante de Pagamento</option>
+                            <option value="contratoDeCompraVendaAssinado">Contrato Assinado</option>
+                            <option value="confirmacaoDeEntrega">Confirmação de Entrega</option>
+                        </select>
+        
+                        <!-- Input de arquivo -->
+                        <input type="file" class="form-control mb-3" id="fileInput">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-warning" id="saveDocumentButton">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../scripts/detalhesVenda.js"></script>
+</body>
+</html>

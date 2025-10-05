@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.campos-imagem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.campo {
+    margin-bottom: 24px;
+}
+
+.email-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#btn-dados {
+    width: 225px;
+}
+
+.email-input {
+    margin-right: 24px;
+}
+
+/* Área do carro usado */
+.carro-usado-area {
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    margin-bottom: 2rem;
+    height: 50%;
+    width: 80%;
+  }
+  
+  .carro-usado-field {
+    margin-bottom: 1rem;
+  }
+  
+  .carro-usado-field h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .carro-usado-field input[type="text"],
+  .carro-usado-field input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 18px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .carro-usado-field input[type="file"] {
+    font-size: 16px;
+    color: #555;
+  }

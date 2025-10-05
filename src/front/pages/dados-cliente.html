@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/aside.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/dados-cliente.css">
+    <link rel="stylesheet" href="../assets/css/inputs.css">
+    <link rel="stylesheet" href="../assets/css/tela.css">
+    <link rel="stylesheet" href="../assets/css/buttons.css">
+    <title>Dados do cliente</title>
+</head>
+<body>
+    <section class="tela">
+        <aside class="sidebar-not-fixed col-sm-auto">
+            <a href="./perfil.html">
+                <i class="fas fa-user icon"></i>
+            </a>
+            <a href="./menu-vendas.html">
+                <i class="fas fa-handshake icon"></i>
+            </a>
+            <a href="./veiculos.html">
+                <i class="fas fa-car icon"></i>
+            </a>
+            <a href="./metricas.html"><i class="fa-solid fa-chart-line icon"></i></a>
+        </aside>
+        <main>
+            <div class="pagina-titulo">
+                <h1>Dados do Cliente</h1>
+            </div>
+            <!--Campos antes do endereco-->
+            <section class="campos-cliente">
+                <div class="campo-titulo">
+                        <h3 class="nome-campo">CPF</h3>
+                    <div class="input">
+                        <input type="text" required class="input-size" id="cpf" placeholder="###.###.###-##">
+                    </div>
+                </div>
+                <div class="campo-titulo">
+                    <h3 class="nome-campo">Nome</h3>
+                    <div class="input">
+                        <input type="text" required class="input-size" id="nome" placeholder="Ex.: João">
+                    </div>
+                </div>
+                <div class="campo-titulo">
+                    <h3 class="nome-campo">Sobrenome</h3>
+                    <div class="input">
+                        <input type="text" required class="input-size" id="sobrenome" placeholder="Ex.: Silva">
+                    </div>
+                </div>
+                <div class="campo-titulo">
+                    <h3 class="nome-campo">RG</h3>
+                    <div class="input">
+                        <input type="text" required class="input-size" id="rg" placeholder="##.###.###-#">
+                    </div>
+                </div>
+                <div class="campo-titulo">
+                    <h3 class="nome-campo">E-mail</h3>
+                    <div class="input">
+                        <input type="email" required class="input-size" id="email" placeholder="exemplo@dominio.com">
+                    </div>
+                </div>
+                <div class="campo-titulo">
+                    <h3 class="nome-campo">Celular</h3>
+                    <div class="input">
+                        <input type="tel" required class="input-size" id="celular" placeholder="(##) #####-####">
+                    </div>
+                </div>
+                <div class="campo-titulo">
+                    <h3 class="nome-campo">Data de Nascimento</h3>
+                    <div class="input">
+                        <input type="date" required class="input-size" id="dataDeNascimento" placeholder="dd/mm/aaaa">
+                    </div>
+                </div>
+                
+            </section>
+            <div class="pagina-titulo">
+                <h1>Endereco</h1>
+            </div>
+            <!--Campos de endereco-->
+            <section class="campos-endereco">
+                <div class="campo-titulo">
+                    <h3 class="nome-campo">CEP</h3>
+                    <div class="input"><input type="text" required class="input-size" id="cep" placeholder="#####-###"></div>
+                </div>
+                <div class="campo-titulo">
+                    <h3 class="nome-campo">Estado</h3>
+                    <div class="input"><input type="text" required class="input-size" id="estado"></div>
+                </div>
+                <div class="campo-titulo">
+                    <h3 class="nome-campo">Cidade</h3>
+                    <div class="input"><input type="text" required class="input-size"id="cidade"></div>
+                </div>
+                <div class="campo-titulo">
+                    <h3 class="nome-campo">Bairro</h3>
+                    <div class="input"><input type="text" required class="input-size" id="bairro"></div>
+                </div>
+                <div class="campo-titulo">
+                    <h3 class="nome-campo">Rua</h3>
+                    <div class="input"><input type="text" required class="input-size" id="rua"></div>
+                </div>
+                <div class="campo-titulo">
+                    <h3 class="nome-campo">Numero</h3>
+                    <div class="input"><input type="number" required class="input-size" id="numero"></div>
+                </div>
+            </section>
+            <div id="errorMessage" class="text-danger"></div>
+            <!--Buttons de voltar e ir para a proxima pagina-->
+            <section class="control-buttons">
+                <a href="montagem.html">
+                    <button type="button" class="btn control-button" id="voltar-btn">Voltar</button>
+                </a>
+                <button type="button" class="btn control-button" id="proceed-btn" onclick="salvarInformacoesCliente()">Atribuir valor</button>
+            </section>
+        </main>
+    </section>
+    <div id="vehicleIdDisplay"></div>
+    <script type="module" src="../scripts/dados-cliente.js"></script>
+</body>
+</html>

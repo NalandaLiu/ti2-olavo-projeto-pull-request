@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/css/veiculo.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--CSS do aside-->
+    <link rel="stylesheet" href="../assets/css/aside.css">
+    <!--CSS para inputs-->
+    <link rel="stylesheet" href="../assets/css/inputs.css">
+    <link rel="stylesheet" href="../assets/css/buttons.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="sidebar col-sm-auto">
+                <a href="./perfil.html"><i class="fas fa-user icon"></i></a>
+                <a href="./menu-vendas.html"><i class="fas fa-handshake icon"></i></a>
+                <a href="./veiculos.html"><i class="fas fa-car icon"></i></a>
+                <a href="./metricas.html"><i class="fa-solid fa-chart-line icon"></i></a>
+            </aside>
+
+            <div class="col-sm p-3 min-vh-100">
+                <div class="container-fluid">
+                    <div class="row">
+                        <main class="p-3 min-vh-100">
+                            <!--Codigo dos filtros-->
+                            <div class="div-filter">
+                                <div class="search-container">
+                                    <input type="text" id="searchInput" placeholder="Pesquisar..." class="search-input">
+                                    <img src="/src/front/assets/img/lupa.png" alt="Lupa" class="search-icon">
+                                </div>
+
+                                <!-- Filtros -->
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMarca" data-bs-toggle="dropdown">Marca</button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMarca" style="max-height: 200px; overflow-y: auto;">
+                                        <li><a class="dropdown-item" href="#" data-value="Audi">Audi</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="BMW">BMW</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="BYD">BYD</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Chevrolet">Chevrolet</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Citroën">Citroën</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Fiat">Fiat</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Ford">Ford</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Honda">Honda</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Hyundai">Hyundai</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Jeep">Jeep</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Kia">Kia</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Land Rover">Land Rover</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Mercedes-Benz">Mercedes-Benz</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Mitsubishi">Mitsubishi</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Nissan">Nissan</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Peugeot">Peugeot</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Porsche">Porsche</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Renault">Renault</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Toyota">Toyota</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Volkswagen">Volkswagen</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Volvo">Volvo</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownPreco"
+                                        data-bs-toggle="dropdown">Preço</button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownPreco">
+                                        <li><a class="dropdown-item" href="#" data-value="Até R$50.000">Até R$50.000</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" data-value="R$50.000 - R$100.000">R$50.000
+                                                - R$100.000</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Acima de R$100.000">Acima de
+                                                R$100.000</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownAno"
+                                        data-bs-toggle="dropdown">Ano</button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownAno">
+                                        <li><a class="dropdown-item" href="#" data-value="2024">2024</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="2023">2023</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="2022">2022</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownCor"
+                                        data-bs-toggle="dropdown">Cor</button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownCor">
+                                        <li><a class="dropdown-item" href="#" data-value="Preto">Preto</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Branco">Branco</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Prata">Prata</a></li>
+                                    </ul>
+                                </div>
+                                <button id="limparFiltro" class="btn btn-secondary">Limpar</button>
+                            </div>
+                            <!--Fim dos filtros-->
+
+                            <!--Area dos cards-->
+                            <div class="cardbox"></div>
+
+                            <!--<div class="add-button">
+                                <a href="#" class="btn btn-warning rounded-circle"><i class="fas fa-plus"></i></a>
+                            </div>-->
+                            <!-- Botão de Adicionar Veículo -->
+                            <button class="btn control-button add-button" data-bs-toggle="modal" data-bs-target="#modalAddVeiculo" id="btn-add-veiculo">+</button>
+                        </main>
+                    </div>
+                </div>
+
+                <!-- Modal Detalhes -->
+                <div class="modal fade" id="modalDetalhes" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Detalhes</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="card-body text-center">
+                                    <div id="titulo-card">
+                                        <h5 id="modalTitulo" class="card-title"></h5>
+                                        <h5 id="modalTitulo" class="card-title"></h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="titulo-atributo-card">Chassi:</div><input type="text"
+                                                id="modalChassi" class="input-modal-detalhes" readonly>
+                                            <div class="titulo-atributo-card">Estado do Veículo:</div><input type="text"
+                                                id="modalEstado" class="input-modal-detalhes" readonly>
+                                            <div class="titulo-atributo-card">Ano:</div><input type="text" 
+                                                id="modalAno" class="input-modal-detalhes" readonly>
+                                            <div class="titulo-atributo-card">Cor:</div><input type="text"
+                                                id="modalCor" class="input-modal-detalhes" readonly>
+                                            <div class="titulo-atributo-card">Preço:</div><input type="text"
+                                                id="modalPreco" class="input-modal-detalhes" readonly>
+                                        </div>
+                                        <div class="col">
+                                            <div class="titulo-atributo-card">Placa:</div><input type="text"
+                                                id="modalPlaca" class="input-modal-detalhes" readonly>
+                                            <div class="titulo-atributo-card">Marca:</div><input type="text"
+                                                id="modalMarca" class="input-modal-detalhes" readonly>
+                                            <div class="titulo-atributo-card">Quilometragem:</div><input type="number"
+                                                id="modalQuilometragem" class="input-modal-detalhes" readonly>
+                                            <div class="titulo-atributo-card">Modelo:</div><input type="text"
+                                                id="modalModelo" class="input-modal-detalhes" readonly>
+                                            <div class="titulo-atributo-card">Disponivel:</div><input type="text"
+                                                id="modalDisponivel" class="input-modal-detalhes" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-evenly">
+                                <button type="button" class="btn-custom-yellow" id="btnExcluirDetalhes" data-bs-toggle="modal" data-bs-target="#confirmarExclusão">Excluir</button>
+                                <button type="button" class="btn-custom-yellow" id="btnCancelarDetalhes">Cancelar</button>
+                                <button type="button" class="btn-custom-yellow" id="btnEditarDetalhes">Editar</button>
+                                <button type="button" class="btn-custom-yellow" id="btnSalvarDetalhes">Salvar</button>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Modal Exclusão-->
+                <div class="modal fade" id="confirmarExclusão" tabindex="-1" role="dialog" aria-labelledby="modalExclusaoLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="btnConfimarcaoExcluirDetalhes">Confirmar Exclusão?</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-evenly">
+                                <button type="button" class="btn-custom-yellow" id="btnConfirmarExclusao" data-bs-toggle="modal">Excluir</button>
+                                <button type="button" class="btn-custom-yellow" id="btnVoltarDetalhes" data-bs-toggle="modal" data-bs-target="#modalDetalhes">Voltar</button>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Adicionar Veículo -->
+                <div class="modal fade" id="modalAddVeiculo" tabindex="-1" aria-labelledby="modalAddVeiculoLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalAddVeiculoLabel">Cadastrar Veículo</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="formAddVeiculo">
+                                    <div class="mb-3">
+                                        <label for="chassi" class="form-label">Chassi</label>
+                                        <input type="text" class="form-control" id="chassi" maxlength="17" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="placa" class="form-label">Placa</label>
+                                        <input type="text" class="form-control" id="placa" maxlength="8" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="estadoDoVeiculo" class="form-label">Estado do Veiculo do Veiculo</label>
+                                        <select class="form-select" id="estadoDoVeiculo" required>
+                                            <option value="" disabled selected>Selecione o Estado do Veiculo</option>
+                                            <option value="Novo">Novo</option>
+                                            <option value="Usado">Usado</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <!--estadoDoVeiculo-->
+                                    <div class="mb-3">
+                                        <label for="marca" class="form-label">Marca</label>
+                                        <select class="form-select" id="marca" required>
+                                            <option value="" disabled selected>Selecione a marca</option>
+                                            <option value="audi">Audi</option>
+                                            <option value="bmw">BMW</option>
+                                            <option value="byd">BYD</option>
+                                            <option value="chevrolet">Chevrolet</option>
+                                            <option value="citroen">Citroën</option>
+                                            <option value="fiat">Fiat</option>
+                                            <option value="ford">Ford</option>
+                                            <option value="honda">Honda</option>
+                                            <option value="hyundai">Hyundai</option>
+                                            <option value="jeep">Jeep</option>
+                                            <option value="kia">Kia</option>
+                                            <option value="land-rover">Land Rover</option>
+                                            <option value="mercedes-benz">Mercedes-Benz</option>
+                                            <option value="mitsubishi">Mitsubishi</option>
+                                            <option value="nissan">Nissan</option>
+                                            <option value="peugeot">Peugeot</option>
+                                            <option value="porsche">Porsche</option>
+                                            <option value="renault">Renault</option>
+                                            <option value="toyota">Toyota</option>
+                                            <option value="volkswagen">Volkswagen</option>
+                                            <option value="volvo">Volvo</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ano" class="form-label">Ano</label>
+                                        <input type="text" class="form-control" id="ano" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="cor" class="form-label">Cor</label>
+                                        <select class="form-select" id="cor" required>
+                                            <option value="" disabled selected>Selecione a cor</option>
+                                            <option value="preto">Preto</option>
+                                            <option value="branco">Branco</option>
+                                            <option value="prata">Prata</option>
+                                            <option value="vermelho">Vermelho</option>
+                                            <option value="cinza">Cinza</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="modelo" class="form-label">Modelo</label>
+                                        <input type="text" class="form-control" id="modelo" maxlength="50" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="preco" class="form-label">Preço</label>
+                                        <input type="text" class="form-control" id="preco" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="quilometragem" class="form-label">Quilometragem</label>
+                                        <input type="text" class="form-control" id="quilometragem" required>
+                                    </div>
+                                    <div class="alert alert-danger" id="errorMessage" style="display: none;"></div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn control-button" id="btnLimpar">Limpar</button>
+                                <button type="button" class="btn control-button" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn control-button" id="btnCadastrar" data-bs-dismiss="modal">Cadastrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../scripts/veiculos.js"></script>
+    <script type="module" src="../scripts/modalVeiculos.js"></script>
+</body>
+
+</html>
