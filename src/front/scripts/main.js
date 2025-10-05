@@ -32,6 +32,7 @@ function renderPagamento() {
     window.location.href = "../pages/pagamento/pagamento.html";
 }
 
+
 const routes = {
     "/": renderCrudVeiculos,
     "/perfil": renderPerfil,
