@@ -8,11 +8,6 @@ logoutBtn.addEventListener("click", ()=>{
 });
 
 
-/*
- * Scripts da tabela de funcionarios
- * Exclusivo do gerente
- */
-
 const tabela = document.getElementById("tabela-funcionarios");
 const endpointListarEmpregados = "http://localhost:8080/funcionario/listarFuncionarios";
 let empregadosJSON = [];
