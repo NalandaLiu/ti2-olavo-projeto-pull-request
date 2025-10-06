@@ -26,10 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-//Id do veiculo vendido
 const carId = parseInt(localStorage.getItem("carId"));
 
-// Campos de informações do veículo
 const chassis = document.getElementById("chassis");
 const placa = document.getElementById("placa");
 const marca = document.getElementById("marca");
@@ -63,37 +61,7 @@ async function encontrarVeiculo(){
 }
 
 
-//Carrega os dados do veiculo vendido
-/*
-window.onload = () => {
-    const veiculoDados = encontrarVeiculo();
-
-    chassis.innerHTML = `${veiculoDados.chassi}`;
-    placa.innerHTML = `${veiculoDados.placa}`
-    marca.innerHTML = `${veiculoDados.marca}`;
-    modelo.innerHTML = `${veiculoDados.modelo}`;
-    ano.innerHTML = `${veiculoDados.ano}`;
-    estado.innerHTML = `${veiculoDados.estado}`;
-    quilometragem.innerHTML = `${veiculoDados.quilometragem}`;
-    preco.innerHTML = `${veiculoDados.preco}`
-}
-/*
-async function encontrarVeiculo(){
-    try {
-        const response = await fetch(`http://localhost:8080/veiculo/buscarVenda/${carId}`, {
-            method: 'GET',
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        })
-
-        if(!response.ok){
-            console.log("Houve um erro ao recuperar as informacoes do veiculo vendido");
-            return null;
-        }
-
-        return await response.json();
-    } catch (error) {
+ catch (error) {
         console.log("Não foi possível recuperar os dados do veículo vendido: " + error);
     }
 }*/
