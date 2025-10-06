@@ -84,6 +84,7 @@ public class VeiculoService {
         Veiculo veiculo = repository.findById(id).orElse(null);
         return veiculo != null ? new VeiculoDto(veiculo) : null;
     }
+    
 
 
     @Transactional
