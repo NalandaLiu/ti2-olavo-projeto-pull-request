@@ -4,7 +4,6 @@ import {cadastrarVeiculo} from "./veiculos.js";
 const token = getCookie('token');
 
 
-//btn limpar do modal
 document.getElementById('btnLimpar').addEventListener('click', function () {
     document.getElementById('formAddVeiculo').reset();
 });
@@ -150,13 +149,5 @@ $(document).ready(function() {
 
 });
 
-/*
-// Função para formatar o preço (ajuste conforme necessário)
-function formatarPreco(element) {
-    // Implementar formatação conforme necessário, se ainda não feito
-    // Exemplo simples:
-    var value = element.value.replace(/\D/g, ''); // Remove caracteres não numéricos
-    element.value = (value / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-}
-*/
+
 
