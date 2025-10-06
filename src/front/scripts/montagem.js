@@ -115,6 +115,7 @@ aplicarFiltro.addEventListener('click', () => {
         (!cor || car.cor.toLowerCase() === cor)
     );
 
+    
     if (filteredCars.length > 0) {
         document.getElementById("errorMessage").style.display = "none";
         displayFiltredCars(filteredCars);
